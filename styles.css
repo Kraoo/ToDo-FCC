@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #000000;
+    color: #fff;
+}
+
+#sidebar {
+    background-color: #333; 
+    width: 200px;
+    padding: 20px;
+}
+
+#lists {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff; 
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.list-item:hover {
+    border-color: #007bff; 
+}
+
+.new-item-input {
+    width: 30rem;
+    padding: 8px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.new-item-input::placeholder {
+    color: #ccc; 
+}
+
+.delete-button {
+    cursor: pointer;
+    background-color: #fc6e6e;
+    color: #fff;
+    padding: 2px 4px;
+    border: none;
+    border-radius: 50%;
+    font-size: 10px;
+    margin-left: 1rem;
+}
+
+.delete-button:hover {
+    background-color: #6d2727;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+    margin: 0 auto;
+    border-left: 1px solid #333; 
+    border: 1px solid #555; 
+    border-radius: 5px; 
+    overflow: auto; 
+}
+
+h1, h2, h3 {
+    color: #fff; 
+}
+
+p {
+    color: #ccc; 
+}
+
+#addListContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#newListInput {
+    flex: 1;
+    margin-right: 5px;
+    padding: 8px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+}
+
+#addListButton {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #007bff; 
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+}
+
+#addListButton:hover {
+    background-color: #0056b3;
+}
+
+#toggleSnowCheckbox {
+    display: none; 
+}
+
+#toggleSnowLabel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff; 
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+#toggleSnowLabel:hover {
+    background-color: #0056b3;
+}
+
+#toggleSnowCheckbox:checked ~ #content {
+    background-color: #000;
+}
+
+.completed {
+    text-decoration: line-through;
+}
