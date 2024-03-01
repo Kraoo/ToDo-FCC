@@ -1,7 +1,7 @@
 # Todo List
 
 - [ ] Save crossed out words locally.
-- [ ] Add a notes section.
+- [X] Add a notes section.
 - [ ] Improve styling of the left sidebar.
 - [ ] Add more content to the home page.
 
