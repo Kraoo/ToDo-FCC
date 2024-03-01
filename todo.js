@@ -32,6 +32,10 @@ function showList(index) {
     const list = lists[index];
     const contentElement = document.getElementById('content');
     contentElement.innerHTML = `<h1>${list.name}</h1>`;
+    
+    // Create the todo list section
+    const todoSection = document.createElement('div');
+    todoSection.classList.add('todo-section');
     const ul = document.createElement('ul');
 
     list.items.forEach((item, idx) => {
@@ -59,8 +63,29 @@ function showList(index) {
         }
     });
 
-    contentElement.appendChild(ul);
-    contentElement.appendChild(inputField);
+    todoSection.appendChild(ul);
+    todoSection.appendChild(inputField);
+    contentElement.appendChild(todoSection);
+
+    // Load and save notes
+    const noteSection = document.createElement('div');
+    noteSection.classList.add('note-section');
+    const noteTextarea = document.createElement('textarea');
+    noteTextarea.setAttribute('placeholder', 'Write notes here...');
+    noteTextarea.classList.add('note-textarea');
+
+    const notesKey = `list_${index}_notes`;
+    const storedNotes = localStorage.getItem(notesKey);
+    if (storedNotes) {
+        noteTextarea.value = storedNotes;
+    }
+
+    noteTextarea.addEventListener('input', function() {
+        localStorage.setItem(notesKey, this.value);
+    });
+
+    noteSection.appendChild(noteTextarea);
+    contentElement.appendChild(noteSection);
 
     const listItems = ul.querySelectorAll('.list-item-text');
     listItems.forEach((item, idx) => {

@@ -140,3 +140,30 @@ p {
 .completed {
     text-decoration: line-through;
 }
+
+.note-section {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333; 
+    border: 1px solid #555; 
+    border-radius: 5px; 
+    padding: 10px; 
+}
+
+.note-textarea {
+    width: 20rem;
+    height: 30rem;
+    resize: none;
+    border: none;
+    background-color: #444; 
+    color: #fff; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+}
+
+.todo-section {
+    float: left;
+    width: calc(70% - 20px); 
+    margin-bottom: 20px; 
+}
