@@ -4,7 +4,6 @@
 - [ ] Add a notes section.
 - [ ] Improve styling of the left sidebar.
 - [ ] Add more content to the home page.
-- [ ] Add a blank credit space for attributing the snow.js file creator.
 
 ---
 
