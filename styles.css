@@ -51,7 +51,7 @@ body {
 
 .delete-button {
     cursor: pointer;
-    background-color: #fc6e6e;
+    background-color: #ff4d4d;
     color: #fff;
     padding: 2px 4px;
     border: none;
@@ -61,7 +61,7 @@ body {
 }
 
 .delete-button:hover {
-    background-color: #6d2727;
+    background-color: #cc0000;
 }
 
 #content {

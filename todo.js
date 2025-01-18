@@ -16,7 +16,8 @@ function loadListContent(index) {
 }
 
 function addList() {
-    const newListName = document.getElementById('newListInput').value.trim();
+    const newListInput = document.getElementById('newListInput');
+    const newListName = newListInput.value.trim();
     if (newListName === '') {
         alert('Please enter a valid list name.');
         return;
@@ -25,7 +26,14 @@ function addList() {
     saveLists();
     saveListContent(lists.length - 1);
     renderLists();
+    newListInput.value = ''; // Clear the input field
 }
+
+document.getElementById('newListInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        addList();
+    }
+});
 
 function showList(index) {
     loadListContent(index);

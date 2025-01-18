@@ -1,7 +1,5 @@
-document.getElementById('newListInput').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        addList();
-    }
+document.getElementById('addListButton').addEventListener('click', function() {
+    addList();
 });
 
 document.getElementById('homeLink').addEventListener('click', function() {
